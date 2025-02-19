@@ -31,22 +31,22 @@ time.sleep(2)
 busqueda_name.clear()
 
 # Localización por CLASS_NAME
-busqueda_class = driver.find_element(By.CLASS_NAME, "search-input")
+busqueda_class = driver.find_element(By.CLASS_NAME, "search-input input")
 busqueda_class.send_keys("Automation Testing")
 time.sleep(2)
 busqueda_class.clear()
 
 # Localización por TAG_NAME
 logo = driver.find_element(By.TAG_NAME, "img")
-print("Tag Name - Alt Text del Logo:", logo.get_attribute("alt"))
+print("Tag Name - Class Text del Logo:", logo.get_attribute("class"))
 
-# Localización por LINK_TEXT
-link_text = driver.find_element(By.LINK_TEXT, "English")
-link_text.click()
-time.sleep(2)
+# Localización por LINK_TEXT(ESTA DENTRO DE UN STRONG DENTRO DEL A POR ESO USARE PARTIAL_LINK_TEXT)
+# link_text = driver.find_element(By.LINK_TEXT, "English")
+# link_text.click()
+# time.sleep(2)
 
-# Volver a la página principal
-driver.back()
+# #Volver a la página principal
+# driver.back()
 time.sleep(2)
 
 # Localización por PARTIAL_LINK_TEXT
